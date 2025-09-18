@@ -27,7 +27,7 @@ createRoot(document.getElementById('root')).render(
     <Carrousel />
     <Banniere />
     <Bloc_commande />
-    {/* <Footer /> */}
+    <Footer />
   </StrictMode>
 );
 

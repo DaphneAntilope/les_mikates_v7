@@ -1,7 +1,6 @@
 import './banniere.css';
 import '../../assets/generales/generales.css'; //importation des variables css
 import '../../assets/fonts/fonts.css'; //importation des typographie de la page
-import { InteractiveHoverButton } from "../../assets/animations/HoverButton.jsx";
 
 function Banniere() {
     return (
@@ -23,7 +22,7 @@ function Banniere() {
                </h3>
 
                {/* <a href="../contact\contact.php">Me contacter</a> */}
-               <InteractiveHoverButton>Interactive Hover Button</InteractiveHoverButton>
+
         </div>
 
         <div class="section4_img2">

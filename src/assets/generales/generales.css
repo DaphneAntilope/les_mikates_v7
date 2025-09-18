@@ -19,8 +19,8 @@
 }
 
 body{
-    background-image: url(src/assets/images/accueil/background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin : 0;
 }

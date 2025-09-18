@@ -2,7 +2,6 @@ import './avis_client.css';
 
 function Avis_client() {
     return (
-    <section class="section6">
       <div class="avis">
         <img src="src\assets\images\accueil\etoile_avis.png" alt=""/>
         <div class="text3">
@@ -13,7 +12,6 @@ function Avis_client() {
             cheffe !"</p>
         </div>
       </div>
-    </section>
     );
 }
 
