@@ -23,7 +23,7 @@ function Header() {
         <li><NavLink to="/commander">Commander</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
         <div className="header-icon">
-        <NavLink to="../connexion/se_connecter.php"><img src="src/assets/images/accueil/union-1.png" alt=""/></NavLink>
+        <NavLink to="/connexion"><img src="src/assets/images/accueil/union-1.png" alt=""/></NavLink>
         <NavLink to="../commander/commander.php"><img src="src/assets/images/accueil/shopping-basket 1.png" alt=""/></NavLink>
     </div>
       </ul>

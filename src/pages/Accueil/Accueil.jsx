@@ -19,7 +19,7 @@ export default function Accueil() {
 
         {/* Section 2 */}
         <section className="accueil-section2">
-          <div className="text">
+          <div className="accueil-section2-text">
             <h1>De délicieuses recettes, faites <br/>
                 maison, authentiques <br/>
                 et livrées chez vous</h1>

@@ -1,31 +1,3 @@
-:root{
-  --page-grad-start: #fff7e6;
-  --page-grad-end:   #ffe9d6;
-
-  --panel-bg:        #ffe2b3;  
-  --field-bg:        #ffeac9;  
-  --field-bd:        #f3b46b;
-  --text:            #6b3b1d;  
-  --muted:           #8f5732;
-
-  --accent-1:        #ff8a1a;  
-  --accent-2:        #ff6200;
-
-  --radius-lg: 28px;
-  --radius-md: 14px;
-  --shadow-lg: 0 18px 40px rgba(0,0,0,.12);
-  --shadow-sm: 0 6px 16px rgba(0,0,0,.08);
-  --focus: rgba(255, 122, 26, .35);
-}
-
-body{
-    background-image: url(../images/accueil/background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-
 .card{
   width:min(92vw, 600px);
   background:var(--panel-bg);
@@ -55,6 +27,7 @@ form{
 }
 
 .field{
+  width: 95%;
   display:grid;
   gap:8px;
 }
@@ -66,7 +39,7 @@ label{
   padding-left:2px;
 }
 
-input{
+input,#email{
   width:100%;
   border:2px solid var(--field-bd);
   background:var(--field-bg);
@@ -91,6 +64,7 @@ input:focus-visible{
 button{
   margin-top:10px;
   border:0;
+  width: 100%;
   border-radius: var(--radius-md);
   padding:16px 18px;
   font-weight:700;
