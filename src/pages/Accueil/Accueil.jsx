@@ -8,7 +8,7 @@ export default function Accueil() {
       <>
       <main>
 
-        <section className="section1">
+        <section className="accueil-section1">
             <div>
                 <h1>Bienvenue dans ma cuisine,<br/>
                     là où les saveurs d'Afrique se <br/> 
@@ -18,7 +18,7 @@ export default function Accueil() {
         </section>
 
         {/* Section 2 */}
-        <section className="section2">
+        <section className="accueil-section2">
           <div className="text">
             <h1>De délicieuses recettes, faites <br/>
                 maison, authentiques <br/>
@@ -42,7 +42,7 @@ export default function Accueil() {
 
         {/* Section 3 */}
 
-        <section className="section3">
+        <section className="accueil-section3">
           <div className="img">
             <img src="src/assets/images/accueil/photo_betti.png" alt=""/>
           </div>
@@ -61,18 +61,17 @@ export default function Accueil() {
           </div>
 
           <div className="image_accueil1">
-
           </div>
         </section>
 
         {/* Section 4 */}
 
-        <section id="section4">
+        <section id="accueil-section4">
               <Carrousel />
         </section>
 
         {/* Section 6 */}
-        <section id="section6">
+        <section id="accueil-section6">
               <Avis_client />
               <Avis_client />
               <Avis_client />

@@ -1,0 +1,138 @@
+/* ----------Section1---------- */
+
+.histoire-section1{
+  width: 100%;
+  height: 800px;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.histoire-section1_div1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.histoire-section1_div1 img{
+  width: 50%;
+}
+
+.histoire-section1 h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  color: #371708;
+  font-weight: lighter;
+  margin-bottom: 5%;
+  text-shadow: 1px 10px 10px #8c8b8b;
+}
+
+.histoire-section1_div1 p{
+  width: 70%;
+  text-align: center;
+  font-family: 'Poly';
+  font-size: 22px;
+}
+
+/* -------section2------- */
+
+.histoire-section2{
+  width: 100%;
+  height: 700px;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+}
+
+.histoire-section2 h1{
+  font-family: 'Pacifico', cursive;
+  color: #371708;
+  font-size: 60px;
+   text-shadow: 1px 10px 10px #8c8b8b;
+}
+
+.histoire-section2 p{
+  font-size: 25px;
+  font-family: 'Poly';
+}
+
+.histoire-section2_text{
+  text-align: center;
+}
+
+/* ------section3------ */
+
+.histoire-section3{
+  width: 100%;
+  height: 900px;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+}
+
+.histoire-section3_text{
+  font-size: 25px;
+  font-family: 'Poly';
+  text-align: center;
+}
+
+/* ------section4------ */
+
+.histoire-section4{
+  width: 100%;
+  height: 300px;
+  margin-top: 8%;
+  background-color: #D15903;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.histoire-section4_div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10%;
+  font-family: 'Passion One';
+}
+
+.histoire-section4_div h1{
+  font-size: 50px;
+}
+
+.histoire-section4_div h3{
+  font-size: 25px;
+}
+
+.histoire-section4_div a{
+  width: 15%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6A605;
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  font-size: 25px;
+}
+
+.histoire-section4_img1{
+  position: relative;
+  bottom: 60%;
+}
+
+.histoire-section4_img2{
+  position: relative;
+  top: 50%;
+}

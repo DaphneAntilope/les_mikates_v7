@@ -1,15 +1,14 @@
-import './mon_histoire.jsx'
+import './mon_histoire.css'
 
 import Banniere from '../../composants/banniere/banniere.jsx';
 
 export default function MonHistoire() {
   return (
     <>
-        <main>
-            <section class="section1">
+            <section className="histoire-section1">
             <h1>La cuisine de Betti</h1>
-            <div class="section1_div1">
-                <img src="../images\mon_histoire\image1.png" alt=""/>
+            <div className="histoire-section1_div1">
+                <img src="src/assets/images/mon_histoire/image1.png" alt=""/>
                 <p>
                     Depuis toute petite, la cuisine a toujours fait partie de ma vie. <br/>
                     En tant que petite fille africaine, on apprend très tôt à <br/>
@@ -37,12 +36,12 @@ export default function MonHistoire() {
                     mes amis ou mes clients, chaque plat est un cadeau, préparé <br/>
                     avec amour et dévouement.
                 </p>
-                <img src="../images\mon_histoire\image2.png" alt=""/>
+                <img src="src/assets/images/mon_histoire\image2.png" alt=""/>
             </div>
         </section>
 
-        <section class="section2">
-            <div class="section2_text">
+        <section className="histoire-section2">
+            <div className="histoire-section2_text">
                 <h1>Le Voyage des Saveurs</h1>
                 <p> Mon parcours avec la cuisine, c’est toute une histoire de vie. <br/>
                     Depuis toujours, j’ai cuisiné, souvent sans même réaliser à quel <br/>
@@ -58,17 +57,17 @@ export default function MonHistoire() {
                     ce rêve, il était déjà là, enfoui.</p>
             </div>
 
-            <div class="section2_img">
-                <img src="../images\mon_histoire\avion.png" alt=""/>
+            <div className="histoire-section2_img">
+                <img src="src/assets/images/mon_histoire\avion.png" alt=""/>
             </div>
         </section>
 
-        <section class="section3">
-            <div class="section3_img">
-                <img src="../images\mon_histoire\photo1.png" alt=""/>
+        <section className="histoire-section3">
+            <div className="histoire-section3_img">
+                <img src="src/assets/images/mon_histoire\photo1.png" alt=""/>
             </div>
 
-            <div class="section3_text">
+            <div className="histoire-section3_text">
                 <p>
                     Aujourd’hui, je comprends que la cuisine est bien plus <br/>
                     qu’une passion pour moi. C’est un moyen d’exister, de <br/>
@@ -83,14 +82,13 @@ export default function MonHistoire() {
                     cuisine de l’instant, avec ce que j’ai sous la main. Une <br/>
                     cuisine d’Afrique, mais surtout une cuisine de cœur.
                 </p>
-                <img src="../images\mon_histoire\ChatGPT Image 17 juin 2025, 10_37_08 1.png" alt=""/>
+                <img src="src/assets/images/mon_histoire\ChatGPT Image 17 juin 2025, 10_37_08 1.png" alt=""/>
             </div>
         </section>
 
-        <section class="section4">
+        <section className="histoire-section4">
             <Banniere />
         </section>
-    </main>
     </>
   )
 }

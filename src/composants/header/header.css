@@ -1,4 +1,4 @@
-.container {
+.header-container {
   width: 100%;
   height: 250px;
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: space-between; /* coin gauche - centre - coin droit */
 }
 
-.imgcoin{
+.header-imgcoin{
   width: 100px; /* fixe ou responsive */
   display: flex;
   align-items: flex-start;
@@ -17,13 +17,13 @@
   transform: scaleX(-1); /* miroir horizontal */
 }
 
-.lien {
+.header-lien {
   width: 80%;
   display: flex;
   justify-content: center;
 }
 
-.lien ul {
+.header-lien ul {
   width: 50%;
   list-style: none;
   display: flex;
@@ -36,13 +36,13 @@
   margin-left: 5%;
 }
 
-.lien ul li a {
+.header-lien ul li a {
   text-decoration: none;
   color: black;
   display: inline-block;
 }
 
-.icon{
+.header-icon{
     position: relative;
     left: 10%;
     width: 10%;

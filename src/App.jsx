@@ -1,11 +1,11 @@
 import { Routes, Route, Link } from "react-router-dom";
-import './assets/generales/generales.css'; //importation des variables css
-import './assets/fonts/fonts.css'; //importation des typographie de la page
-
 
 // Pages
 import Accueil from './pages/Accueil/Accueil.jsx'
 import MonHistoire from './pages/mon_histoire/mon_histoire.jsx';
+import MesProduits from "./pages/mes_produits/mes_produits.jsx";
+import Contact from "./pages/contact/contact.jsx";
+import Fiche_produit from "./composants/fiche_produit/fiche_produit.jsx";
 //import MesProduits from "./pages/MesProduits.jsx";
 //import Contact from "./pages/Contact.jsx";
 //import Commander from "./pages/Commander.jsx";
@@ -15,6 +15,8 @@ import MonHistoire from './pages/mon_histoire/mon_histoire.jsx';
 //Les Composants
 import Header from './composants/header/header.jsx';
 import Footer from './composants/footer/footer.jsx';
+
+
 
 // import SimpleParallax from "simple-parallax-js";
 
@@ -38,6 +40,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/mon_histoire" element={<MonHistoire />} />
+          <Route path="/mes_produits" element={<MesProduits />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/fiche_produit" element={<Fiche_produit />} />
         </Routes>
       </main>
 

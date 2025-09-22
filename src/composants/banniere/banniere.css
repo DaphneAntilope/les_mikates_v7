@@ -1,14 +1,13 @@
-.section4{
+.banniere-section4{
   width: 100%;
   height: 300px;
-  margin-top: 8%;
   background-color: #D15903;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section4_div{
+.banniere-section4_div{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -19,15 +18,15 @@
   font-family: 'Passion One';
 }
 
-.section4_div h1{
+.banniere-section4_div h1{
   font-size: 50px;
 }
 
-.section4_div h3{
+.banniere-section4_div h3{
   font-size: 25px;
 }
 
-.section4_div a{
+.banniere-section4_div a{
   width: 15%;
   height: 60px;
   display: flex;
@@ -40,12 +39,12 @@
   font-size: 25px;
 }
 
-.section4_img1{
+.banniere-section4_img1{
   position: relative;
   bottom: 60%;
 }
 
-.section4_img2{
+.banniere-section4_img2{
   position: relative;
   top: 50%;
 }
