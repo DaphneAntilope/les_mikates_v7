@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import { useCart } from "react-use-cart";
 import './carte_produit.css';
 import plat1 from '../../assets/images/mes_produits/plat1.png'; // adapte le chemin si besoin
 
-export default function Carte_produit() {
+
+export default function Carte_produit({ produit }) {
+
+  const {addItem} = useCart();
+
   return (
     <div className="fiche-produit">
       <div className="image-wrapper">
@@ -18,7 +23,7 @@ export default function Carte_produit() {
         </p>
         
         <div className="boutons">
-          <a href="#" className="ajouter">Ajouter</a>
+          <button className="ajouter" onClick={() => addItem(produit)}>Ajouter</button>
           <Link to="/fiche_produit" className="voir-plus">Voir plus</Link>
         </div>
       </div>
