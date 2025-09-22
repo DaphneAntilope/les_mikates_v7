@@ -3,7 +3,7 @@ import './avis_client.css';
 function Avis_client() {
     return (
       <div class="avis">
-        <img src="src\assets\images\accueil\etoile_avis.png" alt=""/>
+        <img src="/assets/images/accueil/etoile_avis.png" alt=""/>
         <div class="text3">
           <h1>Julien P.</h1>
           <p>"Un vrai voyage culinaire. Les 
