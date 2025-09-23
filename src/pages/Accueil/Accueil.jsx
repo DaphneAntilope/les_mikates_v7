@@ -1,5 +1,7 @@
 import './Accueil.css'
 
+import SimpleParallax from "simple-parallax-js";
+
 import Carrousel from '../../composants/carrousel/carrousel.jsx';
 import Avis_client from '../../composants/avis_client/avis_client.jsx';
 
@@ -31,8 +33,9 @@ export default function Accueil() {
               <img src="src/assets/images/accueil/WhatsApp Image 2025-06-01 at 18.59.20 3.png" alt=""/>
 
               <div className="image_accueil">
-
+                  
               </div>
+
           </div>
 
           <div className="button">

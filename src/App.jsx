@@ -16,17 +16,6 @@ import Footer from './composants/footer/footer.jsx';
 
 
 
-// import SimpleParallax from "simple-parallax-js";
-
-// createRoot(document.getElementById('body')).render(
-//   <StrictMode>
-//     <SimpleParallax>
-//       <img src="src/assets/images/accueil/background.png" alt="image" />
-//     </SimpleParallax>
-//   </StrictMode>
-// );
-
-
 export default function App() {
   return (
     <>

@@ -5,11 +5,16 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url('../src/assets/images/accueil/cercle.png');
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
 }
+
+ .bg-carrousel {
+  width: 50%;
+  margin: auto;
+  position: absolute;
+ }
 
 .image-accueil3 {
   display: flex;

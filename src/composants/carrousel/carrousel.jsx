@@ -1,10 +1,19 @@
 import './carrousel.css';
 
+import { motion } from "framer-motion";
+import bg from "/src/assets/images/accueil/cercle.png";
+
 export default function Carrousel() {
   return (
     <>
       <section className="section11">
-        <div className="image-accueil2"></div>
+              <motion.img
+                src={bg}
+                alt=""
+                className="bg-carrousel"
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+              />
 
         <div className="image-accueil3">
           <img src="/src/assets/images/accueil/plat2.png" alt="Plat 2" />
