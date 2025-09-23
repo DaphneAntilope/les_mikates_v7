@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import "./fiche_produit.css";
 
+import fond_plat from "/src/assets/images/description_plat/cercle_img.png";
+import { motion } from "framer-motion";
+
 export default function Fiche_produit() {
   const { id } = useParams();
   const [produit, setProduit] = useState(null);
@@ -44,7 +47,14 @@ export default function Fiche_produit() {
       <div className="fiche-produit-titre"><h1>{produit.nom}</h1></div>
 
       <div className="fiche-produit-img_plat">
-        <img src={imgSrc} alt={produit.nom} />
+        <img src={imgSrc} alt={produit.nom} className="img_plat" />
+        <motion.img 
+            src={fond_plat} 
+            alt='' 
+            className="bg_plat"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        />
       </div>
 
       <div className="fiche-produit-texte">

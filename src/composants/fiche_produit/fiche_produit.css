@@ -16,22 +16,24 @@
     color: #953910;
   }
 
-  .fiche-produit-img_plat{
+.fiche-produit-img_plat{
     width: 100%;
     height: 800px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(src/assets/images/description_plat/cercle_img.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.fiche-produit-img_plat img{
-  width: 29%;
+.img_plat{
+  width: 30%;
+  position: absolute;
+  bottom: -47%;
+}
+
+.bg_plat{
+  width: 47%;
   position: relative;
-  top: 3.2%;
-  left: 0.5%
 }
 
 .fiche-produit-texte{
