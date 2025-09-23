@@ -1,7 +1,7 @@
 .fiche-produit {
   width: 360px;
   height: 400px;
-  background-image: url('../images/mes_produits/fond_fiche_produit.png');
+  background-image: url('src/asset/images/mes_produits/fond_fiche_produit.png');
   background-size: cover;
   background-position: center;
   border-radius: 30px;
@@ -47,7 +47,7 @@
   bottom: 20%;
 }
 
-.ajouter, .voir-plus {
+.ajouter {
   border: none;
   padding: 10px 20px;
   font-weight: bold;
@@ -58,14 +58,28 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
   text-decoration: none;
-}
-
-.ajouter {
+  width: 35%;
   background-color: #f5b021;
 }
 
+
 .voir-plus {
+  margin-top: 10px;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  top: 1%;
+  height: 20%;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  width: 25%;
   background-color: #a52121;
+  text-align: center;
 }
 
 .ajouter:hover, .voir-plus:hover {
