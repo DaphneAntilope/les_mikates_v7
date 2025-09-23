@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(src/assets/images/description_plat/cercle_img.fiche-produit-png);
+    background-image: url(src/assets/images/description_plat/cercle_img.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -35,7 +35,7 @@
 }
 
 .fiche-produit-texte{
-  width: 100%;
+  width: 40%;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -44,6 +44,7 @@
   font-family: 'Poly', sans-serif;
   font-size: 20px;
   color: #953910;
+  margin: auto;
 }
 
 .fiche-produit-button{
@@ -80,7 +81,7 @@
 .fiche-produit-liste_ingredients{
   width: 100%;
   height: 300px;
-  margin-top: 5%;
+  margin-top: -3%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,10 +97,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-      font-family: 'Poly', sans-serif;
+  font-family: 'Poly', sans-serif;
     font-size: 20px;
     color: #953910;
+  text-align: center;
 }
 
 
 
+.fiche-produit-prix{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poly', sans-serif;
+    font-size: 25px;
+    color: #953910;
+}

@@ -35,7 +35,7 @@ export default function Carte_produit({ produit }) {
           >
             Ajouter
           </button>
-          <Link to={`/description/${produit.id_produit}`} className="voir-plus">Voir plus</Link>
+          <Link to={`/fiche_produit/${produit.id_produit}`} className="voir-plus">Voir plus</Link>
         </div>
       </div>
     </div>

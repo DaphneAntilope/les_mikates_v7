@@ -7,11 +7,18 @@ export default function MesProduits() {
   const [produits, setProduits] = useState([]);
 
   // Charger les produits depuis ton API PHP
-  useEffect(() => {
+    useEffect(() => {
     fetch('/api/getProduits.php')
-      .then(res => res.json())
-      .then(data => setProduits(data));
-  }, []);
+        .then(async (res) => {
+        if (!res.ok) {
+            const txt = await res.text(); // debug utile
+            throw new Error('HTTP ' + res.status + ' - ' + txt.slice(0,200))
+        }
+        return res.json()
+        })
+        .then(setProduits)
+        .catch(console.error)
+    }, [])
 
   return (
     <>

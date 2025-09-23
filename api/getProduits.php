@@ -1,10 +1,16 @@
 <?php
-header("Content-Type: application/json");
-$pdo = new PDO("mysql:host=127.0.0.1;dbname=mikate_bdd;charset=utf8mb4","root","");
+header("Content-Type: application/json; charset=utf-8");
 
-$id = intval($_GET['id'] ?? 0);
-$stmt = $pdo->prepare("SELECT * FROM produit WHERE id_produit = ?");
-$stmt->execute([$id]);
-$produit = $stmt->fetch(PDO::FETCH_ASSOC);
+try {
+    $pdo = new PDO("mysql:host=127.0.0.1;dbname=mikate_bdd;charset=utf8mb4","root","");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-echo json_encode($produit ?: null);
+    $sql = "SELECT id_produit, nom, description, prix, image, allergene, ingredients FROM produit";
+    $stmt = $pdo->query($sql);
+    $rows = $stmt ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
+
+    echo json_encode($rows, JSON_UNESCAPED_UNICODE);
+} catch (Throwable $e) {
+    http_response_code(500);
+    echo json_encode([]); // ✅ jamais null
+}

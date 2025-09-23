@@ -5,13 +5,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // redirige /api vers ton serveur WAMP (port 80)
+      // Toutes les requêtes /api de Vite iront vers Apache
       '/api': {
-        target: 'http://localhost',
+        target: 'http://localhost/les_mikates_v7', // <- dossier servi par WAMP
         changeOrigin: true,
         secure: false,
-        // rewrite: path => path.replace(/^\/api/, '/api') // si besoin
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
+      },
+    },
+  },
 })
