@@ -50,9 +50,19 @@ export default function Contact() {
 
             <section className="contact-section3">
                 <div className="icon_reseau1">
-                    <a href=""><img src="src/assets/images/contact/facebook.png" alt=""/></a>
-                    <a href=""><img src="src/assets/images/contact/instagram.png" alt=""/></a>
-                    <a href=""><img src="src/assets/images/contact/youtube.png" alt=""/></a>
+
+                    <a href="https://www.facebook.com/share/177yBt8PgQ/" target="_blank" rel="noopener noreferrer">
+                    <img src="src/assets/images/contact/facebook.png" alt=""/>
+                    </a>
+
+                    <a href="https://www.instagram.com/lesmikatesdebetti/" target="_blank" rel="noopener noreferrer">
+                    <img src="src/assets/images/contact/instagram.png" alt=""/>
+                    </a>
+
+                    <a href="https://youtube.com/@bettinak-desruisseaux?si=9H1zPiBgy27IRKWZ" target="_blank" rel="noopener noreferrer">
+                    <img src="src/assets/images/contact/youtube.png" alt=""/>
+                    </a>
+                    
                 </div>
                 <div className="contact-section3_div2">
                     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SLGgmSiySorniJ6-ltz1oAhtXC1hD3Y&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>

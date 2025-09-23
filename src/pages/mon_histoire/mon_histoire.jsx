@@ -1,12 +1,15 @@
 import './mon_histoire.css'
 
 import Banniere from '../../composants/banniere/banniere.jsx';
+import AnimatedTitle from '../../assets/animations/AnimatedTitle.jsx';
+
+
 
 export default function MonHistoire() {
   return (
     <>
             <section className="histoire-section1">
-            <h1>La cuisine de Betti</h1>
+            <AnimatedTitle text="La cuisine de Betti" baseDelay={0.4} step={0.06} />
             <div className="histoire-section1_div1">
                 <img src="src/assets/images/mon_histoire/image1.png" alt=""/>
                 <p>

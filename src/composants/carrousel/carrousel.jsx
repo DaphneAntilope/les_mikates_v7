@@ -1,4 +1,5 @@
 import './carrousel.css';
+import AnimatedButton from '../../assets/animations/AnimatedButton.jsx';
 
 export default function Carrousel() {
   return (
@@ -14,7 +15,7 @@ export default function Carrousel() {
       </section>
 
       <section className="section12">
-        <a href="../mes_produits/mes_produits.php">Commandez maintenant !</a>
+       <AnimatedButton as="a" href="../mes_produits/mes_produits.php" className="button_plat">Commandez maintenant !</AnimatedButton>
       </section>
     </>
   );

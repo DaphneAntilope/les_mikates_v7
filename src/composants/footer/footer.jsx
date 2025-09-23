@@ -2,6 +2,7 @@ import './footer.css';
 import '../../assets/fonts/fonts.css'; //importation des typographie de la page
 import '../../assets/generales/generales.css'; //importation des typographie de la page
 import logo_mikate from '../../assets/images/logos/logo_mikate.png'; //header.jsx → dossier header → ../ donne src/composants/ → ../ donne src/ → puis assets/....
+import { NavLink, Link  } from "react-router-dom";
 
 
 import phone from '../../assets/images/accueil/téléphone.png';
@@ -44,11 +45,11 @@ export default function Footer() {
 
         <div className="liens_reseaux">
           <ul>
-            <li><a href="/index.php">Accueil</a></li>
-            <li><a href="/mon_histoire/mon_histoire.php">Mon histoire</a></li>
-            <li><a href="/mes_produits/mes_produits.php">Nos produits</a></li>
-            <li><a href="/commander/commander.php">Commander</a></li>
-            <li><a href="/contact/contact.php">Contact</a></li>
+            <li><NavLink to="/">Accueil</NavLink></li>
+            <li><NavLink to="/mon_histoire">Mon histoire</NavLink></li>
+            <li><NavLink to="/mes_produits">Nos produits</NavLink></li>
+            <li><NavLink to="/commander">Commander</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
         </div>
 
@@ -83,7 +84,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/share/177yBt8PgQ/" target="_blank" rel="noopener noreferrer">
               <img src={facebook} alt="Facebook" />
             </a>
-            <a href="https://www.instagram.com/betti_auquotidien?igsh=MWprcnplb2Y2NjBsZw==" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/lesmikatesdebetti/" target="_blank" rel="noopener noreferrer">
               <img src={instagram} alt="Instagram" />
             </a>
             <a href="https://youtube.com/@bettinak-desruisseaux?si=9H1zPiBgy27IRKWZ" target="_blank" rel="noopener noreferrer">
