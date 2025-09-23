@@ -63,16 +63,20 @@
 }
 
 .button_plat {
-  width: 400px;
-  height: 70px;
-  font-family: 'Passion One', cursive;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background: #bf3604; /* exemple */
+  border-radius: 8px;
   border: none;
-  border-radius: 10px;
-  background-color: #953910;
-  color: white;
-  font-size: 25px;
   cursor: pointer;
+  text-decoration: none; /* si c'est un <a> */
+  color: white; /* fallback si gradient non supporté */
+  font-weight: 700;
 }
+.button_plat:hover { transform: translateY(-2px); }
+
 
 .image_accueil {
   position: absolute;

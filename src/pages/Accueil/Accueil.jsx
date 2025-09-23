@@ -4,6 +4,8 @@ import SimpleParallax from "simple-parallax-js";
 
 import Carrousel from '../../composants/carrousel/carrousel.jsx';
 import Avis_client from '../../composants/avis_client/avis_client.jsx';
+import AnimatedButton from '../../assets/animations/AnimatedButton.jsx';
+
 
 export default function Accueil() {
   return (
@@ -39,7 +41,7 @@ export default function Accueil() {
           </div>
 
           <div className="button">
-              <a href="../mes_produits/mes_produits.php"><button className="button_plat">Découvrez nos plats</button></a>
+             <AnimatedButton as="a" href="../mes_produits/mes_produits.php" className="button_plat">Découvrez nos plats</AnimatedButton>
           </div>
         </section>
 

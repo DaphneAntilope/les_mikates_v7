@@ -49,7 +49,7 @@
     <h1 style="margin-bottom: 15%;">La tradition dans chaque plat.</h1>
     <div class="icon_reseau">
       <a href="https://www.facebook.com/share/177yBt8PgQ/" target="_blank"><img src="../images\accueil\facebook_logo.png" alt=""></a>
-      <a href="https://www.instagram.com/betti_auquotidien?igsh=MWprcnplb2Y2NjBsZw==" target="_blank"><img src="../images\accueil\instagram 1.png" alt=""></a>
+      <a href="https://www.instagram.com/lesmikatesdebetti/" target="_blank"><img src="../images\accueil\instagram 1.png" alt=""></a>
       <a href="https://youtube.com/@bettinak-desruisseaux?si=9H1zPiBgy27IRKWZ" target="_blank"><img src="../images\accueil\youtube.png" alt=""></a>
     </div>
     <h3 style="margin-top: 15%;">© 2025 – Tous droits réservés – Les mikatés de Betti <br><br>
