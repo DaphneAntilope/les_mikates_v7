@@ -13,8 +13,8 @@ import Form_connexion from "./composants/connexion/connexion.jsx";
 import Form_inscription from "./composants/inscription/inscription.jsx";
 import Header from './composants/header/header.jsx';
 import Footer from './composants/footer/footer.jsx';
-
-
+import EspaceUser from "./pages/espace_user/espace_user.jsx";
+import RequireAuth from './composants/RequireAuth.jsx';
 
 export default function App() {
   return (
@@ -34,6 +34,7 @@ export default function App() {
           <Route path="/inscription" element={<Form_inscription />} />
           <Route path="/panier" element={<Panier />} />
           <Route path="*" element={<p style={{padding:16}}>404 – Page introuvée</p>} />
+          <Route path="/compte" element={<RequireAuth> <EspaceUser /> </RequireAuth>} />
         </Routes>
       </main>
 
@@ -43,3 +44,4 @@ export default function App() {
     </>
   );
 }
+

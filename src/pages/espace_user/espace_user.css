@@ -1,0 +1,29 @@
+/* espace_user.css - version simple */
+.eu-page { max-width: 1200px; margin: 32px auto; padding: 0 16px; }
+.eu-titre h1 { font-size: 36px; margin-bottom: 2%; color: #e85a22;  text-align: center;}
+
+.eu-content { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; }
+
+/* menu */
+.eu-menu { background:#fff7f0; padding:16px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+.eu-avatar { text-align:center; margin-bottom:12px; }
+.eu-avatar img { width:88px; height:88px; border-radius:50%; object-fit:cover; }
+.eu-nom { font-weight:700; margin-top:8px; color:#333; }
+.eu-mail { font-size:13px; color:#777; }
+
+/* nav */
+.eu-menu ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.eu-menu a, .eu-menu .eu-logout { display:block; padding:10px 12px; border-radius:8px; text-decoration:none; color:#333; }
+.eu-menu a.active { background:#ffe8db; font-weight:700; color:#e85a22; }
+.eu-menu .eu-logout { background:#fff; border:1px solid #eee; cursor:pointer; }
+
+/* main */
+.eu-main { background:#fff; padding:18px; border-radius:10px; }
+.eu-infos p { margin:8px 0; color:#444; }
+.eu-commandes-list { display:flex; flex-direction:column; gap:12px; }
+.eu-box { padding:12px; border-radius:8px; border:1px solid #f0e0da; background:#fffaf6; }
+.eu-box h3 { margin:0 0 6px 0; }
+.statut { display:inline-block; padding:6px 10px; border-radius:999px; font-size:13px; color:#fff; }
+.statut.en-cours { background:#f59e0b; }
+.statut.livree { background:#10b981; }
+.statut.annulee { background:#ef4444; }

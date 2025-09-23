@@ -1,42 +1,58 @@
-import { NavLink, Link } from 'react-router-dom';
-
+import { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import './header.css';
-import logo_mikate from '../../assets/images/logos/logo_mikate.png'; //header.jsx → dossier header → ../ donne src/composants/ → ../ donne src/ → puis assets/....
-
-
-
+import logo_mikate from '../../assets/images/logos/logo_mikate.png';
+import userIcon from '../../assets/images/accueil/union-1.png';
+import basketIcon from '../../assets/images/accueil/shopping-basket 1.png';
+import headerCorner from '../../assets/images/accueil/image_coin_header.png';
 
 function Header() {
-    return(
-        <header>
-    <div className="header-container">
+  const [logged, setLogged] = useState(Boolean(localStorage.getItem("user")));
 
-    <div className="header-imgcoin">
-      <img src="src/assets/images/accueil/image_coin_header.png" alt=""/>
-    </div>
+  // Écoute les changements de storage (autres onglets / logout)
+  useEffect(() => {
+    function onStorage(e) {
+      if (e.key === "user") setLogged(Boolean(e.newValue));
+    }
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
 
-    <nav className="header-lien">
-      <ul>
-        <li><NavLink to="/mon_histoire">Mon Histoire</NavLink></li>
-        <li><NavLink to="/mes_produits">Mes produits</NavLink></li>
-        <li><NavLink to="/"><img src={logo_mikate} alt=""/></NavLink></li>
-        <li><NavLink to="/commander">Commander</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <div className="header-icon">
-        <NavLink to="/connexion"><img src="src/assets/images/accueil/union-1.png" alt=""/></NavLink>
-        <NavLink to="../commander/commander.php"><img src="src/assets/images/accueil/shopping-basket 1.png" alt=""/></NavLink>
-    </div>
-      </ul>
-    </nav>
+  return (
+    <header>
+      <div className="header-container">
 
-    
+        <div className="header-imgcoin">
+          <img src={headerCorner} alt="coin décoratif"/>
+        </div>
 
-    <div className="header-imgcoin" id="imgcoin1">
-      <img src="src/assets/images/accueil/image_coin_header.png" alt=""/>
-    </div>
-  </div>
-  </header>
-    );
+        <nav className="header-lien">
+          <ul>
+            <li><NavLink to="/mon_histoire">Mon Histoire</NavLink></li>
+            <li><NavLink to="/mes_produits">Mes produits</NavLink></li>
+            <li><NavLink to="/"><img src={logo_mikate} alt="Logo"/></NavLink></li>
+            <li><NavLink to={logged ? "/compte" : "/connexion"}>Commander</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+
+            <div className="header-icon">
+              {/* lien dynamique : /compte si connecter, sinon /connexion */}
+              <NavLink to={logged ? "/compte" : "/connexion"}>
+                <img src={userIcon} alt="User" />
+              </NavLink>
+
+              <NavLink to="/panier">
+                <img src={basketIcon} alt="Panier" />
+              </NavLink>
+            </div>
+          </ul>
+        </nav>
+
+        <div className="header-imgcoin" id="imgcoin1">
+          <img src={headerCorner} alt="coin décoratif"/>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;
