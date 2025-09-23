@@ -29,10 +29,11 @@ export default function App() {
           <Route path="/mon_histoire" element={<MonHistoire />} />
           <Route path="/mes_produits" element={<MesProduits />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/fiche_produit" element={<Fiche_produit />} />
+          <Route path="/fiche_produit/:id" element={<Fiche_produit />} />
           <Route path="/connexion" element={<Form_connexion />} />
           <Route path="/inscription" element={<Form_inscription />} />
           <Route path="/panier" element={<Panier />} />
+          <Route path="*" element={<p style={{padding:16}}>404 – Page introuvée</p>} />
         </Routes>
       </main>
 

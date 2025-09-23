@@ -1,21 +1,20 @@
+// src/main.jsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom' 
-
-import Panier from './pages/panier/panier.jsx'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
+import MyCartProvider from './composants/context/CartProvider.jsx'
 
-import './assets/generales/generales.css'; //importation des variables css
-import './assets/fonts/fonts.css'; //importation des typographie de la page
-
-
+// global css (variables, fonts, reset...)
+import './assets/generales/generales.css'
+import './assets/fonts/fonts.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <Panier>
-      <App />
-    </Panier>
+      <MyCartProvider>
+        <App />
+      </MyCartProvider>
     </BrowserRouter>
   </StrictMode>
 )

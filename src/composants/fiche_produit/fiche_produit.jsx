@@ -1,51 +1,97 @@
+// src/pages/Fiche_produit/Fiche_produit.jsx
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useCart } from "react-use-cart";
 import "./fiche_produit.css";
 
-export default function Fiche_produit () {
-    return (
-    <>
-        <section className="fiche-produit-section1">
-            <div className="fiche-produit-titre">
-            <h1>Description du plat</h1>
-            </div>
+export default function Fiche_produit() {
+  const { id } = useParams();               // /description/:id
+  const [produit, setProduit] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const { addItem } = useCart();
 
-            <div className="fiche-produit-img_plat">
-                <img src="src\assets\images\mes_produits\plat1.png" alt=""/>
-            </div>
+  useEffect(() => {
+    if (!id) return;
+    setLoading(true);
+    fetch('/api/getProduits.php')
+      .then((res) => res.json())
+      .then((data) => {
+        setProduit(data || null);
+      })
+      .catch((err) => {
+        console.error("getProduit error", err);
+        setProduit(null);
+      })
+      .finally(() => setLoading(false));
+  }, [id]);
 
-            <div className="fiche-produit-texte">
-            <h3>C’est un plat emblématique de la cuisine congolaise,<br/>
-                simple, nourrissant et très apprécié pour sa richesse en goût.<br/>
-                Le mot "Madesu" vient du lingala et signifie "haricots".<br/>
-                Il était souvent cuisiné lors des grandes réunions de<br/>
-                famille ou des fêtes populaires, car il pouvait être <br/>
-                préparé en grande quantité et nourrir beaucoup de monde<br/>
-            </h3>
-            </div>
+  if (loading) return <p style={{ padding: 16 }}>Chargement…</p>;
+  if (!produit) return <p style={{ padding: 16 }}>Produit introuvable.</p>;
 
-            <div className="fiche-produit-button">
-            <button>Ajouter au panier</button>
-            </div>
+  // image : si la BDD contient "images/..." on transforme en /images/...
+  const imgSrc =
+    produit.image && (produit.image.startsWith("/") || produit.image.startsWith("http"))
+      ? produit.image
+      : produit.image
+      ? `/${produit.image.replace(/\\/g, "/")}` // remplace backslashes potentiels
+      : "/images/placeholder.png"; // fallback
 
-            <div className="fiche-produit-titre2">
-            <h1>Ingredients</h1>
-            </div>
+  return (
+    <section className="fiche-produit-section1">
+      <div className="fiche-produit-titre">
+        <h1>{produit.nom}</h1>
+      </div>
 
-            <div className="fiche-produit-liste_ingredients">
-                <ul>
-                    <li>Haricots rouges ou blanc</li> <br/>
-                    <li>Tomates fraîches ou concentré de tomate</li> <br/>
-                    <li>Oignons</li> <br/>
-                    <li>Ail</li><br/>
-                    <li>Huile végétale</li><br/>
-                    <li>Sel, Poivre</li><br/>
-                </ul> 
-            </div>
+      <div className="fiche-produit-img_plat">
+        <img src={imgSrc} alt={produit.nom} />
+      </div>
 
-            <div className="fiche-produit-texte3">
-                <p>Allergène Possibles dans le Madesu</p><br/>
-                <p>Légumineuses (Haricots rouges / blancs) /Ail / Oignon</p>
-            </div>
-        </section>
-    </>
-    );
+      <div className="fiche-produit-texte">
+        <h3 dangerouslySetInnerHTML={{ __html: produit.description.replace(/\n/g, "<br/>") }} />
+      </div>
+
+      <div className="fiche-produit-info">
+        <p><strong>Prix :</strong> {produit.prix} €</p>
+        {produit.allergene && <p><strong>Allergènes :</strong> {produit.allergene}</p>}
+      </div>
+
+      <div className="fiche-produit-button">
+        <button
+          onClick={() =>
+            addItem({
+              id: produit.id_produit,
+              nom: produit.nom,
+              price: Number(produit.prix),
+              image: imgSrc,
+            })
+          }
+        >
+          Ajouter au panier
+        </button>
+      </div>
+
+      <div className="fiche-produit-titre2">
+        <h1>Ingrédients</h1>
+      </div>
+
+      <div className="fiche-produit-liste_ingredients">
+        {produit.ingredients ? (
+          <ul>
+            {produit.ingredients.split(",").map((ing, i) => (
+              <li key={i}>{ing.trim()}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>Ingrédients non renseignés</p>
+        )}
+      </div>
+
+      {produit.allergene && (
+        <div className="fiche-produit-texte3">
+          <p><strong>Allergènes possibles :</strong></p>
+          <p>{produit.allergene}</p>
+        </div>
+      )}
+    </section>
+  );
 }
